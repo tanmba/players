@@ -22,7 +22,7 @@ import PlayerDetails from "./PlayerDetails";
 const Players = () => {
   const [players, setPlayers] = useState([]);
   const [playerId, setPlayerId] = useState(Number);
-  const [error, setError] = useState<any>();
+  const [errors, setErrors] = useState<any>();
   const [open, setOpen] = useState(false);
 
   const handleClose = () => setOpen(false);
@@ -31,21 +31,22 @@ const Players = () => {
     setOpen(true);
     setPlayerId(id)
   };
-
-  const getAPIData = async () => {
-    try {
-      const apiResponse = await fetch("./data.json");
-      const json = await apiResponse.json();
-      const data = (json.players);
-      setPlayers(data);
-    } catch (error) {
-      setError(error);
-    }
-  };
   
   useEffect(() => {
+    const getAPIData = async () => {
+      try {
+        const apiResponse = await fetch("./data.json");
+        const json = await apiResponse.json();
+        const data = (json.players);
+        setPlayers(data);
+      } catch (error) {
+        setErrors(error);
+        console.error("There was an error!", errors);
+      }
+    };
+    
     getAPIData();
-  }, [])
+  }, [errors])
 
   return (
     <Box className="homeBcg" sx={homeStyle}>
