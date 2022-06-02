@@ -1,6 +1,6 @@
-# Player
+# Players
 
-This is a little app to load and tennis players and their details.
+This is a little app to load tennis players and their details.
 
 Live on : https://tenis-players.netlify.app/
 
