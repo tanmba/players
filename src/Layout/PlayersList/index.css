@@ -1,0 +1,15 @@
+.homeBcg {
+  background-image: url("../../assets/home.png");
+  background-size: cover;
+}
+
+.outline {
+  -webkit-text-stroke: 4px #F2753B;
+  color: white;
+}
+
+@media (max-width: 768px) { 
+  .outline {
+    -webkit-text-stroke: 1px #F2753B;
+  }
+}

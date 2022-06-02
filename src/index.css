@@ -1,3 +1,18 @@
+@font-face {
+  font-family: "Montserrat Bold";
+  src: local("Montserrat Bold"), url(./fonts/Montserrat/Montserrat-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: "Mulish Bold";
+  src: local("Mulish Bold"), url(./fonts/Mulish/Mulish-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: "Mulish Semibold";
+  src: local("Mulish Semibold"), url(./fonts/Mulish//Mulish-SemiBold.ttf) format('truetype');
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
